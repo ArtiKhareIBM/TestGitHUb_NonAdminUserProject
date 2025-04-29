@@ -7,12 +7,30 @@ packages:
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareIBM
   gitBranch: main
+- name: CurrentDatePackage
+  version: "1.0"
+  gitServerName: srcCtrl_Github_nonadmin_Arti
+  gitUrl: https://github.com/ArtiKhareIBM
+  gitUsername: ArtiKhareIBM
+  gitBranch: main
 services:
 - serviceName: project.testgithub_nonadminuser.integrations:testnonadminFS
   packages:
   - name: TestGitHUb_NonAdminUserProject
     version: "1.0"
+  - name: CurrentDatePackage
+    version: "1.0"
 - serviceName: pub.date:getCurrentDate
   packages:
   - name: WmPublic
     version: 11.1.0.0.2050
+- serviceName: project.testgithub_nonadminuser.integrations:testpackageFS
+  packages:
+  - name: TestGitHUb_NonAdminUserProject
+    version: "1.0"
+  - name: CurrentDatePackage
+    version: "1.0"
+- serviceName: new_folder:new_flowservice
+  packages:
+  - name: CurrentDatePackage
+    version: "1.0"
